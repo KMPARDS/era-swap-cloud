@@ -20,7 +20,7 @@ We aim to utilise IPFS for storing files off-chain. But following challenges are
 
 So to make our platforms possible, we propose the following solution until other platforms have been developed and matured.
 
-We plan to duplicate the idea of Filecoin for Era Swap Ecosystem in a centralized way for now to prevent involvement of an extra currency (though a discussion would be nice with their team if ES can be instead involved instead for better UX). We can start an Era Swap Cloud service. We will setup multiple AWS servers in multiple zones in the world in which user can submit their profile picture and pay for it. User can also choose to upload profile picture to multiple zones and pay more amount. This will feature the following things:
+We plan to duplicate the idea of Filecoin for Era Swap Ecosystem in a centralized way for now (edit 9 sept: TODO: this needs to be updated with the decentralised plan) to prevent involvement of an extra currency (though a discussion would be nice with their team if ES can be instead involved instead for better UX). We can start an Era Swap Cloud service. We will setup multiple AWS servers in multiple zones in the world in which user can submit their profile picture and pay for it. User can also choose to upload profile picture to multiple zones and pay more amount. This will feature the following things:
 
 1. User can pay in ES depending on his profile photo size and number of servers user wants their profile photo to exist in the world.
 2. Since the user has to pay for their data availability for (1 year or higher time), there will not be data spamming which will fill the servers with data.
