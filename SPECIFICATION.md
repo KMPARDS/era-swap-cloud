@@ -12,7 +12,7 @@ When a user is uploading a profile picture on a platform like SwappersWall (soci
 We aim to utilise IPFS for storing files off-chain. But following challenges are faced:
 
 1. Paying to upload a profile picture is very foreign to general user (facebook)
-2. If IPFS pricing in other currency than ES (e.g. Filecoin), then it increases the difficulty to just upload a profile picture on platform like SwappersWall.
+2. If IPFS pricing in other currency than ES (e.g. Filecoin), then it increases the difficulty to just upload a profile picture on platform like SwappersWall. (edit 9 sept: AFAIK, there is no tokenomics in IPFS).
 3. Infrastructure which make this possible like Filecoin, are still in development, i.e. not ready.
 4. This also applies to other utilities like KYC documents and attachments in messaging.
 
