@@ -17,6 +17,8 @@ ipfs config Datastore.StorageMax 20GB
 # uncomment if you want direct access to the instance's gateway
 ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/8080
 ipfs config Addresses.API /ip4/0.0.0.0/tcp/5001
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin "[\"*\"]"
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Credentials "[\"true\"]"
 
 bash -c 'cat >/lib/systemd/system/ipfs.service <<EOL
 [Unit]
