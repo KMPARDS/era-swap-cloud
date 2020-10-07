@@ -22,6 +22,7 @@ ipfs config --json API.HTTPHeaders.Access-Control-Allow-Credentials "[\"true\"]"
 bash -c 'cat >/lib/systemd/system/ipfs.service <<EOL
 [Unit]
 Description=ipfs daemon
+After=network-online.target
 [Service]
 ExecStart=/usr/local/bin/ipfs daemon --enable-gc
 Restart=always
