@@ -6,23 +6,14 @@ rm go-ipfs_v0.6.0_linux-amd64.tar.gz
 mv go-ipfs/ipfs /usr/local/bin
 rm -rf go-ipfs
 
-# init repo
 echo 'export IPFS_PATH=/data/ipfs' >>~/.bash_profile
 source ~/.bash_profile
 mkdir -p $IPFS_PATH
 ipfs init -p server
 
-ipfs config Datastore.StorageMax 20GB
-# uncomment if you want direct access to the instance's gateway
-ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/8080
-ipfs config Addresses.API /ip4/0.0.0.0/tcp/5001
-ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin "[\"*\"]"
-ipfs config --json API.HTTPHeaders.Access-Control-Allow-Credentials "[\"true\"]"
-
 bash -c 'cat >/lib/systemd/system/ipfs.service <<EOL
 [Unit]
 Description=ipfs daemon
-After=network-online.target
 [Service]
 ExecStart=/usr/local/bin/ipfs daemon --enable-gc
 Restart=always
@@ -41,6 +32,7 @@ EOL'
 
 ipfs bootstrap rm --all
 ipfs bootstrap add /ip4/13.127.174.128/tcp/4001/ipfs/QmepeqPz6xwW5Y8L3Q9FR8BWA9HiArzcRmYZRoCpiUESwX
+
 
 ipfs config Datastore.StorageMax 20GB
 ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/8080
